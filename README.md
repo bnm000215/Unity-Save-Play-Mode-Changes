@@ -4,7 +4,11 @@ Unity tool allowing changes made in play mode to be restored upon returning to e
 
 ## Usage
 
-Add the SavePlayModeChanges component to the root of any hierarchies you'd like saved. That's it!
+EN : 
+Add the `SavePlayModeObject` component to the root of any hierarchies you'd like saved. That's it!
+  
+KR :
+플레이 모드에서 변화를 저장하고 싶은 경우, `SavePlayModeObject` 컴포넌트를 변화가 저장되어야되는 오브젝트에 추가해줍니다. 참 쉽죠!
 
 ## Method
 
@@ -35,7 +39,7 @@ It's a brute force sort of solution. This means:
 
 ## How it works
 
-The SavePlayModeChangesChecker class finds all references to SavePlayModeChanges components on exiting the game. It serializes the entire hierarchy for those objects, and on entering play mode deletes the old hierarchies and creates the new ones.
+The SavePlayModeChangesChecker class finds all references to `SavePlayModeObject` components on exiting the game. It serializes the entire hierarchy for those objects, and on entering play mode deletes the old hierarchies and creates the new ones.
 
 ## Other issues
 
