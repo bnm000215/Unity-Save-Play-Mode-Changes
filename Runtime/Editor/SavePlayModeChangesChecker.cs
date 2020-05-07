@@ -18,9 +18,9 @@ namespace PlayModeSaver
         public static event OnRestorePlayModeChangesDelegate OnRestorePlayModeChanges;
 
         static SavePlayModeChangesChecker() => 
-            EditorApplication.playmodeStateChanged += OnChangePlayModeState;
+            EditorApplication.playModeStateChanged += EditorApplicationOnplayModeStateChanged;
 
-        private static void OnChangePlayModeState()
+        private static void EditorApplicationOnplayModeStateChanged(PlayModeStateChange obj)
         {
             if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)
             {
@@ -53,6 +53,7 @@ namespace PlayModeSaver
             else if (!EditorApplication.isPlaying && !EditorApplication.isPlayingOrWillChangePlaymode) 
                 Load();
         }
+
 
         private static void Save()
         {
