@@ -65,7 +65,7 @@ KR :
 - It'll break any references _from outside the_ list of things to save _into_ the list of things to save
 - 변경사항이 너무 많이 발생시 문제가 발생합니다.
 - Breaks prefab connections
-- Deselects and closes a previously selected and expanded hierarchy (not investigated)
+- 저장할 오브젝트를 계층 구조를 형성했을 때 해당 계층 구조에 `SavePlayModeObject`를 두지 않으면 문제가 발생하게 됩니다.
 - Can't save anything marked static, since static meshes are combined and don’t have asset files
 - 저장할 요소를 찾지못한 경우, 재대로 저장되 되지 않을 수 있습니다.
 
